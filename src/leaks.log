@@ -1,0 +1,134 @@
+==97196== Memcheck, a memory error detector
+==97196== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==97196== Using Valgrind-3.21.0.GIT-lbmacos and LibVEX; rerun with -h for copyright info
+==97196== Command: ./test
+==97196== Parent PID: 71903
+==97196== 
+==97196== 
+==97196== Support for macOS 11 and later is currently experimental
+==97196== Some reports (especially memory leaks) might be missing or incorrect
+==97196== 
+==97196== Warning: set address range perms: large range [0x7fff204e0000, 0x8000202e0000) (defined)
+==97196== Warning: set address range perms: large range [0x7fff2a926000, 0x7fff7fe7c000) (defined)
+==97196== Warning: set address range perms: large range [0x7fff8e744000, 0x7fffc04e0000) (noaccess)
+==97196== Warning: set address range perms: large range [0x7fffc04e0000, 0x7fffe33a4000) (defined)
+==97196== Warning: set address range perms: large range [0x7fffe33a4000, 0x7fffffe00000) (noaccess)
+==97196== Conditional jump or move depends on uninitialised value(s)
+==97196==    at 0x7FFF20831B87: ??? (in /dev/ttys002)
+==97196==    by 0x100010B12: memcmp_14_fn (in ./test)
+==97196==    by 0x100292AD4: tcase_run_tfun_nofork (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x100292325: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x1000CA599: main (in ./test)
+==97196==  Uninitialised value was created by a stack allocation
+==97196==    at 0x10001097A: memcmp_14_fn (in ./test)
+==97196== 
+==97196== Use of uninitialised value of size 8
+==97196==    at 0x7FFF20831BA3: ??? (in /dev/ttys002)
+==97196==    by 0x100010B12: memcmp_14_fn (in ./test)
+==97196==    by 0x100292AD4: tcase_run_tfun_nofork (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x100292325: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x1000CA599: main (in ./test)
+==97196==  Uninitialised value was created by a stack allocation
+==97196==    at 0x10001097A: memcmp_14_fn (in ./test)
+==97196== 
+==97196== Use of uninitialised value of size 8
+==97196==    at 0x7FFF20831BA8: ??? (in /dev/ttys002)
+==97196==    by 0x100010B12: memcmp_14_fn (in ./test)
+==97196==    by 0x100292AD4: tcase_run_tfun_nofork (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x100292325: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x1000CA599: main (in ./test)
+==97196==  Uninitialised value was created by a stack allocation
+==97196==    at 0x10001097A: memcmp_14_fn (in ./test)
+==97196== 
+==97196== Conditional jump or move depends on uninitialised value(s)
+==97196==    at 0x100010B1A: memcmp_14_fn (in ./test)
+==97196==    by 0x100292AD4: tcase_run_tfun_nofork (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x100292325: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x1000CA599: main (in ./test)
+==97196==  Uninitialised value was created by a stack allocation
+==97196==    at 0x10001097A: memcmp_14_fn (in ./test)
+==97196== 
+==97196== Conditional jump or move depends on uninitialised value(s)
+==97196==    at 0x100010B32: memcmp_14_fn (in ./test)
+==97196==    by 0x100292AD4: tcase_run_tfun_nofork (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x100292325: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x1000CA599: main (in ./test)
+==97196==  Uninitialised value was created by a stack allocation
+==97196==    at 0x10001097A: memcmp_14_fn (in ./test)
+==97196== 
+==97196== 
+==97196== FILE DESCRIPTORS: 7 open (3 std) at exit.
+==97196== Open file descriptor 27: /Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar
+==97196==    <inherited from parent>
+==97196== 
+==97196== Open file descriptor 25: /dev/ptmx
+==97196==    <inherited from parent>
+==97196== 
+==97196== Open file descriptor 12: /Applications/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/v8_context_snapshot.x86_64.bin
+==97196==    <inherited from parent>
+==97196== 
+==97196== Open file descriptor 3: /Users/ninetalm/C2_s21_stringplus-1/src/leaks.log
+==97196==    <inherited from parent>
+==97196== 
+==97196== 
+==97196== HEAP SUMMARY:
+==97196==     in use at exit: 0 bytes in 0 blocks
+==97196==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==97196== 
+==97196== All heap blocks were freed -- no leaks are possible
+==97196== 
+==97196== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
+==97196== 
+==97196== 1 errors in context 1 of 5:
+==97196== Conditional jump or move depends on uninitialised value(s)
+==97196==    at 0x100010B32: memcmp_14_fn (in ./test)
+==97196==    by 0x100292AD4: tcase_run_tfun_nofork (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x100292325: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x1000CA599: main (in ./test)
+==97196==  Uninitialised value was created by a stack allocation
+==97196==    at 0x10001097A: memcmp_14_fn (in ./test)
+==97196== 
+==97196== 
+==97196== 1 errors in context 2 of 5:
+==97196== Conditional jump or move depends on uninitialised value(s)
+==97196==    at 0x100010B1A: memcmp_14_fn (in ./test)
+==97196==    by 0x100292AD4: tcase_run_tfun_nofork (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x100292325: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x1000CA599: main (in ./test)
+==97196==  Uninitialised value was created by a stack allocation
+==97196==    at 0x10001097A: memcmp_14_fn (in ./test)
+==97196== 
+==97196== 
+==97196== 1 errors in context 3 of 5:
+==97196== Use of uninitialised value of size 8
+==97196==    at 0x7FFF20831BA8: ??? (in /dev/ttys002)
+==97196==    by 0x100010B12: memcmp_14_fn (in ./test)
+==97196==    by 0x100292AD4: tcase_run_tfun_nofork (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x100292325: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x1000CA599: main (in ./test)
+==97196==  Uninitialised value was created by a stack allocation
+==97196==    at 0x10001097A: memcmp_14_fn (in ./test)
+==97196== 
+==97196== 
+==97196== 1 errors in context 4 of 5:
+==97196== Use of uninitialised value of size 8
+==97196==    at 0x7FFF20831BA3: ??? (in /dev/ttys002)
+==97196==    by 0x100010B12: memcmp_14_fn (in ./test)
+==97196==    by 0x100292AD4: tcase_run_tfun_nofork (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x100292325: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x1000CA599: main (in ./test)
+==97196==  Uninitialised value was created by a stack allocation
+==97196==    at 0x10001097A: memcmp_14_fn (in ./test)
+==97196== 
+==97196== 
+==97196== 1 errors in context 5 of 5:
+==97196== Conditional jump or move depends on uninitialised value(s)
+==97196==    at 0x7FFF20831B87: ??? (in /dev/ttys002)
+==97196==    by 0x100010B12: memcmp_14_fn (in ./test)
+==97196==    by 0x100292AD4: tcase_run_tfun_nofork (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x100292325: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==97196==    by 0x1000CA599: main (in ./test)
+==97196==  Uninitialised value was created by a stack allocation
+==97196==    at 0x10001097A: memcmp_14_fn (in ./test)
+==97196== 
+==97196== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
